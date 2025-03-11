@@ -1,0 +1,84 @@
+/* Reset de márgenes, padding y box-sizing para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globales para el body */
+body {
+    font-family: 'Algerian', sans-serif;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Estilos para el menú de navegación */
+.nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav > li {
+    position: relative;
+    margin-right: 20px;
+}
+
+.nav li a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    background-color: #333;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.nav li a:hover {
+    background-color: #444;
+    transform: scale(1.05); 
+}
+
+/* Estilos para los submenús */
+.nav li ul {
+    display: none; /* Inicialmente oculto */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #555;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    z-index: 1000; /* Asegura que el submenú esté encima de otros elementos */
+}
+
+.nav li:hover > ul {
+    display: block; /* Mostrar el submenú cuando se pasa el mouse sobre el menú principal */
+}
+
+.nav li ul li a {
+    padding: 12px 20px;
+    background-color: #555;
+    color: white;
+    text-align: left;
+}
+
+.nav li ul li a:hover {
+    background-color: #666;
+}
+
+/* Estilos para la imagen en el header */
+#header img {
+    margin: 30px auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+#header img:hover {
+    transform: scale(1.1);
+}
